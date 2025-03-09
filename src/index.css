@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00ff87;
+  --primary-dark: #00cc6a;
+  --secondary: #6b21a8;
+  --accent: #ff00ff;
+  --background: #0a0a0a;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--background);
+  color: #ffffff;
+}
+
+.crypto-slider {
+  background: linear-gradient(90deg, rgba(0,255,135,0.1) 0%, rgba(255,0,255,0.1) 100%);
+  backdrop-filter: blur(8px);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.neon-border {
+  box-shadow: 0 0 10px var(--primary),
+              0 0 20px var(--primary),
+              0 0 30px var(--accent);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.cyber-grid {
+  background-image: linear-gradient(rgba(0, 255, 135, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 255, 135, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.swiper-slide {
+  transition: all 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
